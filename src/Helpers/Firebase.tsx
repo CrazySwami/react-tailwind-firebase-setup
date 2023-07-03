@@ -1,20 +1,23 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from 'firebase/firestore';
+
 
 const firebaseConfig = {
-  apiKey: "AIzaSyApsv2XLdwKtI0lddYvOghHvttIu2v11t4",
-  authDomain: "react-mania-899d8.firebaseapp.com",
-  projectId: "react-mania-899d8",
-  storageBucket: "react-mania-899d8.appspot.com",
-  messagingSenderId: "765882448893",
-  appId: "1:765882448893:web:5b7c11c211887417473794",
-  measurementId: "G-5QJGCD3DV1",
+  apiKey: "AIzaSyBARVJEBZvJvQ8gBEtt86FwlydmbM8PB1I",
+  authDomain: "share-access-app.firebaseapp.com",
+  projectId: "share-access-app",
+  storageBucket: "share-access-app.appspot.com",
+  messagingSenderId: "412350968974",
+  appId: "1:412350968974:web:d8cbfc989cd0152f9845df",
+  measurementId: "G-0MT0LSRK34"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
-export { app, analytics, auth };
+export { app, analytics, auth, db };
